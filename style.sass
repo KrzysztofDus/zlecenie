@@ -1,0 +1,518 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,900,700)
+
+
+$fonts: "Montserrat", sans-serif
+$colors: #313234
+$colors2: #29b6f6
+$colors3: #fff
+$colors4: #fdfdfd
+$colors5: #212121
+$colors6: #313332 
+$colors7: #fefefe
+$colors8: #313336
+$colors9: #fdfdfd
+$colors10: #331333
+$colors11: #202129
+
+*
+ box-sizing: border-box
+
+.row
+ &:before,
+ &:after
+ content: " "
+ display: table
+ clear: both
+
+[class*="col-"]
+ float: left
+ min-height: 1px
+ max-height: 1000px
+ 
+.col-1 
+ width: 8.33%
+.col-2 
+ width: 16.66%
+.col-3 
+ width: 25%
+.col-4 
+ width: 33.33%
+.col-5 
+ width: 41.66%
+.col-6 
+ width: 50%
+.col-7 
+ width: 58.33%
+.col-8 
+ width: 66.66%
+.col-9 
+ width: 75%
+.col-10 
+ width: 83.33%
+.col-11 
+ width: 91.66%
+.col-12 
+ width: 100%
+.col-img 
+ width: 20%
+.col-img2 
+ width: 40%
+
+
+.col-4, 
+.col-3, 
+.col-2, 
+.col-5, 
+.col-6
+ text-align: center
+
+ 
+
+h1, 
+h2, 
+h3, 
+h4
+ text-transform: uppercase
+ font-weight: 900
+
+
+p
+ line-height: 150%
+ 
+
+body
+ margin: 0
+ font-size: 20px
+ font-family: 'Lato', sans-serif
+
+  /* Navigation*/
+.container
+ margin: auto
+ max-width: 1200px
+ width: 100%
+
+header
+ background-color: $colors
+ height: 80px
+ padding: 0
+ margin: 0
+ font-size: 25px
+
+ .logo
+  display: inline-block
+  line-height: 80px
+  img
+   vertical-align: middle
+ ul
+  float: right
+  margin-right: 30px
+  padding: 0
+  li
+   display: inline-block
+   line-height: 25px
+   color: $colors3
+   padding-left: 30px
+   float: right
+   &:hover
+    cursor: pointer
+    color: $colors2
+
+ /* Sekcja powitalna*/
+.hero
+ background-image: url(https://images.unsplash.com/1/macbook-air-all-faded-and-stuff.jpg?format=auto&auto=compress&dpr=1.25&crop=entropy&fit=crop&w=1536&h=1024&q=80-small)
+ background-size: cover
+ background-position: center
+ height: 500px
+ width: 100%
+ position: relative
+ 
+ .slogan
+  float: right
+  width: 600px
+  color: $colors3
+  background-color: rgba(0, 0, 0, 0.5)
+  margin: 150px 40px 0 0
+  padding: 50px 0 50px 0
+  h2
+   margin: 0
+   padding: 0 20px 0 120px
+   font-size: 35px
+   font-weight: 400   
+    
+   span
+    display: block
+    font-weight: 800 
+
+.all-circle
+ position: absolute
+ bottom: 0
+ left: 50%
+ transform: translateX(-50%)
+ display: inline-block
+
+ .circle
+  display: inline-block
+  width: 30px
+  height: 30px
+  border-radius: 100%
+  margin: 30px 10px 10px
+  cursor: pointer
+  background-color: gray
+  &:hover
+   background-color: $colors3
+
+ /* Sekcja korzysci*/
+
+.services
+ text-align: center
+ padding: 70px
+ i.fa
+  font-size: 80px
+  padding: 20px
+  background-color: $colors8
+  cursor: pointer
+  color: $colors3
+  width: 130px
+  border-radius: 15%
+  &:hover
+   background-color: $colors2
+  &:hover+h3
+   color: $colors2
+
+
+.col4 p
+ padding-bottom: 40px
+
+  /* works*/
+
+.work
+ padding-bottom: 60px
+ text-align: center
+
+  /*galery*/
+   
+.gallery, .first, .second, .photo
+ padding: 0
+ margin: 0
+
+.photo
+ height: 300px
+ overflow: hidden
+ float: left
+ position: relative
+ top: 0
+ left: 0
+ img
+  width: 100%
+  height: 100%
+
+.layer 
+ position: absolute
+ width: 100%
+ height: 100%
+ background: rgba(0, 0, 0, 0.0 )
+ overflow: hidden
+ transition: 0.5s
+ a 
+  position: absolute
+  top: 50%
+  left: 50%
+  margin-top: -20px
+  display: block
+  width: 50px
+  height: 50px
+  font-size: 34px
+  line-height: 45px
+  color: $colors4
+  background: transparent
+  border: 2px solid $colors4
+  border-radius: 5px
+  opacity: 0
+  transition: 0.5s
+  text-align: center
+  &:hover
+   color: $colors10
+   background: $colors4
+  &:first-child 
+   margin-left: -338px
+   transform: rotate(0deg)
+  &:last-child 
+   margin-left: 250px
+   &:hover
+   
+
+ &:hover a:first-child 
+  margin-left: -56px
+  opacity: 0.9
+
+ &:hover a:last-child 
+  margin-left: 8px
+  opacity: 0.9
+
+
+ &:hover 
+  background: rgba(0, 0, 0, 0.4)
+
+
+  /*Team*/
+.team
+ padding: 70px 0 70px 0
+ 
+.person 
+ border: 0.5px solid $colors4
+ width: 165px
+ height: 165px
+ border-radius: 50%
+ margin: 0 auto
+ position: relative
+ p 
+  display: block
+  width: 100%
+  margin: 0
+  font-size: 24px
+  line-height: 165px
+  color: $colors4
+  background: rgba(0, 0, 0, 0.4)
+  opacity: 0
+  &:hover 
+   opacity: 1
+   border-radius: 50%
+ 
+.manager
+ @extend .person
+ background-image: url("http://i.telegraph.co.uk/multimedia/archive/00881/money-graphics-2007_881956a.jpg")
+ background-size: cover
+ background-position: 25% 75%
+ 
+.designer
+ @extend .person
+ background-image: url("http://media.grupojoly.com/imagen.php?imagen=//0000881500/0000881843.jpg&an=230")
+ background-size: cover
+ background-position: 25% 75%
+
+.secretary
+ @extend .person
+ background-image: url("http://www.nogg.se/upload/84090/BloggPhoto_84090_233132.jpg")
+ background-size: cover
+ background-position: 25% 75%
+
+
+.writer
+ @extend .person
+ background-image: url("https://upload.wikimedia.org/wikipedia/commons/a/a6/Ingmar_Bergman_1957.jpg")
+ background-size: cover
+ background-repeat: no-repeat
+
+
+
+
+/*section width img */
+.img
+ padding: 0
+ max-height: 480px
+ background: url("https://i.imgur.com/tZrSexG.jpg") no-repeat
+ background-position: bottom center
+ .phone
+  padding: 0
+  img
+   margin-top: 70px
+   padding: 0
+ .text
+  text-align: left
+  margin-top: 80px
+  background: rgba(0, 0, 0, 0.5)
+  color: $colors3
+  height: 360px
+  padding: 30px
+
+.col-8, 
+.col-4
+ padding: 0
+
+
+/*section numbers*/
+
+.numbers
+ padding: 70px 0 70px 0
+
+ p
+  font-size: 50px
+  font-weight: 900
+  margin: 0
+ h4
+  color: $colors2
+  margin: 0
+
+  /*footer*/
+
+
+.about h3 
+ position: relative
+ right: 36%
+ display: inline-block
+
+.social, .contact
+ h3
+  position: relative
+  right: 31%
+  display: inline-block
+
+footer h3:after 
+ content: ''
+ position: absolute
+ top: 48%
+ right: -126px
+ width: 110px
+ border-top: 2px solid
+
+footer p 
+ margin: 0
+
+
+.none
+ padding: 5px
+
+
+.social 
+ p 
+  margin-bottom: 20px
+
+ a 
+  display: inline-block
+  text-align: center
+  background: $colors2
+  margin-right: 5px
+  width: 50px
+  height: 50px
+  font-size: 32px
+  line-height: 50px
+  color: $colors4
+  transition: color 0.3s
+  float: left
+  &:hover 
+   color: $colors5
+
+.copyright 
+ background: $colors11
+ text-align: center
+ color: $colors3
+ p 
+  line-height: 4em
+
+
+.foot
+ padding: 4em
+ background: $colors6
+ color: $colors7
+
+.contact
+ padding-left: 20px
+
+
+.about , .contact , .social
+ p
+  text-align: left
+
+@media screen and (min-width: 360px) 
+@media (max-width: 767px) 
+ .col-s-1 
+  width: 8.33%
+ .col-s-2 
+  width: 16.66%
+ .col-s-3 
+  width: 25%
+ .col-s-4 
+  width: 33.33% 
+ .col-s-5 
+  width: 41.66% 
+ .col-s-6 
+  width: 50%
+ .col-s-7 
+  width: 58.33%
+ .col-s-8 
+  width: 66.66%
+ .col-s-9 
+  width: 75%
+ .col-s-10 
+  width: 83.33%
+ .col-s-11 
+  width: 91.66%
+ .col-s-12 
+  width: 100%
+
+ [class*="col-"] 
+  width: 100%
+  float: left 
+
+ header
+  height: 300px
+  .logo
+   display: block
+   img
+    display: block
+    margin: 0 auto
+  .nav
+   height: 300px
+  ul
+   padding: 0
+   float: none
+   text-align: center
+   width: 100%
+   li
+    float: none
+    display: block
+    padding: 0 0 10px 0
+
+ .slogan
+  margin: 120px 0 0 0
+  width: 100%
+  text-align: center
+  h2
+   padding: 0
+  
+  
+ .all-circle
+  margin-top: 150px
+
+ .phone
+  img
+   display: none
+
+ .text
+  margin: 0 auto
+  width: 100%
+  text-align: center
+  font-size: 0.8em
+  padding: 5px
+ 
+
+ .foot 
+  font-size: 0.8em
+
+ .contact
+  padding: 0
+  h3 
+   position: relative
+   right: 0
+  
+ .about,
+ .social 
+  h3 
+   position: relative
+   right: 0
+ 
+ .persons h3:after 
+  display: none
+
+ .photo
+  height: auto
+
+ .foot
+  padding: 2em
+
+
+@media(max-width: 880px) and (min-width: 768px)
+ header li
+  font-size: 0.7em
+
+ 
