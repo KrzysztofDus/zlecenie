@@ -28,11 +28,10 @@ module.exports = function (grunt) {
  		}
  	},
 
-//Add watch task for images so they woulb be minified when new will be added
  	watch: {
  		scripts: {
  			files: ['sass/*.sass'],
- 			tasks: ['sass'],
+ 			tasks: ['sass', 'imagemin'],
  			options: {
  				spawn: false,
  			},
